@@ -14,9 +14,9 @@ które później porzechowywane są w pamięci przeglądarki tak,
 
 ## Technologies:
 
-React
-Redux Toolkit
-Bootstrap & Reactstrap
-Axios
-Scss
-Tippy.js
+    React
+    Redux Toolkit
+    Bootstrap & Reactstrap
+    Axios
+    Scss
+    Tippy.js
