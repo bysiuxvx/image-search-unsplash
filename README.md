@@ -12,6 +12,11 @@ Możliwe jest zapisywanie konkretnych zdjęć do ulubionych,
 które później porzechowywane są w pamięci przeglądarki tak,
 że po powrocie do aplikacji lista ulubionych nadal jest zachowana.
 
+## Demo
+
+    [Gh-pages](https://bysiuxvx.github.io/image-search-unsplash/)
+    [Heroku](https://unsplash-app-pb.herokuapp.com/)
+
 ## Technologies:
 
     React
