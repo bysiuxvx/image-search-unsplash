@@ -6,15 +6,12 @@ export const favoritesSlice = createSlice({
   name: "favoritesList",
   initialState,
   reducers: {
-    hydrate: (state, action) => {
-      return action.payload
-    },
     addToFavorites: (state, action) => {
       if (state.includes(action.payload)) return
       else return [...state, action.payload]
     },
     removeFromFavorites: (state, action) => {
-      return state.filter((id) => id !== action.payload)
+      return state.filter(({ id }) => id !== action.payload)
     },
   },
 })

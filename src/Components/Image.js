@@ -18,10 +18,10 @@ const Image = (props) => {
       <img src={details.urls.small} alt={details.tags.title}></img>
       <Row className="image-details">
         <Col xs="6">
-          <p>Author: {details.user.name}</p>
+          <p>Taken by: {details.user.name}</p>
         </Col>
         <Col xs="4">
-          {favoriteList.includes(details.id) ? (
+          {favoriteList.find((item) => item.id === details.id) ? (
             <Button
               color="danger"
               onClick={() => dispatch(removeFromFavorites(details.id))}
