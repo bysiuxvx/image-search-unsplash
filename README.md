@@ -14,8 +14,8 @@ które później porzechowywane są w pamięci przeglądarki tak,
 
 ## Demo
 
-[Gh-pages](https://bysiuxvx.github.io/image-search-unsplash/)
-[Heroku](https://unsplash-app-pb.herokuapp.com/)
+- [Gh-pages](https://bysiuxvx.github.io/image-search-unsplash/)
+- [Heroku](https://unsplash-app-pb.herokuapp.com/)
 
 ## Technologies:
 
