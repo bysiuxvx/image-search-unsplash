@@ -1,0 +1,42 @@
+import React from "react"
+import { Container, Button, Row, Col } from "reactstrap"
+import { useDispatch, useSelector } from "react-redux"
+import {
+  addToFavorites,
+  removeFromFavorites,
+} from "../redux/reducers/favoritesSlice"
+
+const Image = (props) => {
+  const { details } = props
+
+  const favoriteList = useSelector((state) => state.favoriteList)
+
+  const dispatch = useDispatch()
+
+  return (
+    <Container className="image-wrapper">
+      <img src={details.urls.small} alt={details.tags.title}></img>
+      <Row className="image-details">
+        <Col xs="6">
+          <p>Author: {details.user.name}</p>
+        </Col>
+        <Col xs="4">
+          {favoriteList.includes(details.id) ? (
+            <Button
+              color="danger"
+              onClick={() => dispatch(removeFromFavorites(details.id))}
+            >
+              Remove from favorites
+            </Button>
+          ) : (
+            <Button onClick={() => dispatch(addToFavorites(details))}>
+              Add to favorites
+            </Button>
+          )}
+        </Col>
+      </Row>
+    </Container>
+  )
+}
+
+export default Image
