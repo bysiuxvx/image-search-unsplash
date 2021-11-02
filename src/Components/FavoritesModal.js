@@ -19,7 +19,6 @@ const FavoritesModal = (props) => {
             ? `${modalContent.description} by ${modalContent.user.name}`
             : `Taken by: ${modalContent.user.name}`}
         </p>
-        <p>{modalContent.id}</p>
       </ModalHeader>
       <ModalBody>
         <img src={modalContent.urls.regular} alt={modalContent.description} />
