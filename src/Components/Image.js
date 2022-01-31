@@ -1,5 +1,5 @@
 import React from "react"
-import { Container, Button, Row, Col } from "reactstrap"
+import { Button, Row, Col } from "reactstrap"
 import { useDispatch, useSelector } from "react-redux"
 import {
   addToFavorites,
