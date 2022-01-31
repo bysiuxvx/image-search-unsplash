@@ -14,8 +14,12 @@ const Image = (props) => {
   const dispatch = useDispatch()
 
   return (
-    <Container className="image-wrapper">
-      <img src={details.urls.small} alt={details.tags.title}></img>
+    <div className="image-wrapper">
+      <img
+        className="image-search-result"
+        src={details.urls.small}
+        alt={details.tags.title}
+      ></img>
       <Row className="image-details">
         <Col xs="6">
           <p>Taken by: {details.user.name}</p>
@@ -35,7 +39,7 @@ const Image = (props) => {
           )}
         </Col>
       </Row>
-    </Container>
+    </div>
   )
 }
 

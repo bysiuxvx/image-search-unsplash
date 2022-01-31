@@ -4,6 +4,7 @@ import {
   Row,
   Col,
   Offcanvas,
+  OffcanvasHeader,
   OffcanvasBody,
   Button,
 } from "reactstrap"
@@ -38,8 +39,10 @@ const FavoritesSidebar = () => {
       </Button>
 
       <Offcanvas isOpen={canvasOpen} toggle={toggleCanvas}>
+        <OffcanvasHeader toggle={toggleCanvas}>
+          Your favorites - click them!
+        </OffcanvasHeader>
         <OffcanvasBody>
-          <h4>Your favorites - click them!</h4>
           {favoriteList.length > 0 &&
             favoriteList.map((item) => (
               <Row key={item.id} className="favorite-item">

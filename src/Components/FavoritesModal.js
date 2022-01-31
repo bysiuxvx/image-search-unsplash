@@ -20,7 +20,7 @@ const FavoritesModal = (props) => {
             : `Taken by: ${modalContent.user.name}`}
         </p>
       </ModalHeader>
-      <ModalBody>
+      <ModalBody className="modal-favorite-image">
         <img src={modalContent.urls.regular} alt={modalContent.description} />
       </ModalBody>
       <ModalFooter>

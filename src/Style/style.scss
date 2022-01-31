@@ -1,6 +1,7 @@
 @import "bootstrap/dist/css/bootstrap.min.css";
 @import "node_modules/bootstrap/scss/bootstrap";
 @import "tippy.js/dist/tippy.css";
+@import "include-media/dist/_include-media.scss";
 
 .app {
   display: flex;
@@ -9,7 +10,8 @@
   align-items: center;
   width: 100vw;
   height: 100vh;
-  overflow: auto;
+  overflow: hidden;
+  overflow-y: auto;
 
   .search-form {
     display: flex;
@@ -18,13 +20,22 @@
     min-width: 13.75rem;
     max-width: 40vw;
     margin: 3rem;
+    @include media("<tablet") {
+      margin: 1rem;
+    }
     form {
       margin: 0 auto;
       display: flex;
       input {
-        width: 100%;
-        padding: 0 5rem;
+        width: 25vw;
         margin: 0 1rem;
+        text-align: center;
+        @include media("<825px") {
+          width: 205px;
+        }
+        @include media("<=600px") {
+          margin-left: -1.5rem;
+        }
       }
     }
   }
@@ -66,10 +77,22 @@
 
 .body-container {
   height: 80vh;
+  width: 80vw;
+  overflow-y: auto;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+
+  @include media("<tablet") {
+    width: 100vw;
+    height: 79vh;
+    margin-bottom: -2.5rem;
+  }
 }
 
-.image-wrapper {
-  display: inline-block;
+div.image-wrapper {
   position: relative;
   padding: 0;
   margin: 1rem;
@@ -89,6 +112,7 @@
       justify-content: right;
       align-items: center;
       margin: 0 auto;
+
       div {
         opacity: 1;
         display: flex;
@@ -105,6 +129,16 @@
       }
     }
   }
+
+  img.image-search-result {
+    max-width: 400px;
+    max-height: 600px;
+    @include media("<=tablet") {
+      max-height: 60vh;
+      max-width: 85vw;
+    }
+  }
+
   .image-details {
     opacity: 0;
     display: none;
@@ -127,6 +161,35 @@
     .btn {
       opacity: 0;
       display: none;
+    }
+  }
+}
+
+.offcanvas,
+.offcanvas-header,
+.offcanvas-body {
+  @include media("<600px") {
+    width: 100vw;
+  }
+}
+
+// fav img modal
+.modal-xl {
+  justify-content: center;
+}
+
+.modal-content {
+  width: fit-content;
+  height: fit-content;
+
+  .modal-body {
+    width: 100%;
+    img {
+      max-height: 80vh;
+      @include media("<=tablet") {
+        max-height: 60vh;
+        max-width: 85vw;
+      }
     }
   }
 }
