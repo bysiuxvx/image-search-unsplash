@@ -16,7 +16,7 @@ const Body = () => {
   return (
     <>
       <Search />
-      {imageList && (
+      {imageList.length > 0 && (
         <Container className="body-container">
           {isLoading ? (
             <Spinner />
